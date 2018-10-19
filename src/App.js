@@ -17,22 +17,82 @@ const datas = [{
     qty:1,
     size:48,
     image:"https://4.imimg.com/data4/RY/RE/MY-16694305/decent-gents-shirt-500x500.jpg"
-}]
+},{
+    name:"Levis Men Off-White & Blue Slim Fit Solid Casual",
+    price:"500",
+    qty:1,
+    size:48,
+    image:"https://4.imimg.com/data4/RY/RE/MY-16694305/decent-gents-shirt-500x500.jpg"
+}
+]
 
 
 class App extends Component {
    
-    componentDidMount(){
-        console.log("hello")
+    state={
+        cart:datas,
+        cartIndex:undefined
     }
     
+
+    componentDidMount(){
+        for(var i=0;i<this.state.cart.length;i++){
+            console.log(this.state.cart[i].name);
+        }
+    }
+    
+
+    changeqty=(i)=>{
+        console.log(i);
+        this.setState({
+            cartIndex:i
+        })
+        console.log(this.state.cartIndex);
+        
+    }
+    
+    changeqtyV=(qty)=>{
+        console.log(qty,this.state.cartIndex); 
+        var cart = this.state.cart;
+        cart[this.state.cartIndex].qty = qty;
+        this.setState({
+            cart:cart
+        })
+        
+//        $('#myModalqty').modal('hide');
+        
+    }
+    
+    
+    changesizeV=(s)=>{
+        console.log(s,this.state.cartIndex); 
+        var cart = this.state.cart;
+        cart[this.state.cartIndex].size = s;
+        this.setState({
+            cart:cart
+        })
+        
+//        $('#myModalqty').modal('hide');
+        
+    }
+    
+    removeItem=(i)=>{
+        const cart = this.state.cart;
+        cart.splice(i,1);
+        this.setState({
+            cart:cart
+        })
+    }
+    
+    
+    
   render() {
-      const status = (datas.length>0)?true: false;
+      const status = (this.state.cart.length>0)?true: false;
       
     return (
         <div>
             {status ?(
-                <Items datas={datas}/>
+                <Items datas={this.state.cart} changeqtyV={this.changeqtyV} changesizeV={this.changesizeV} changeqty={this.changeqty} removeItem={this.removeItem}/>
             ):(
                 <EmptyCart/>
             )}

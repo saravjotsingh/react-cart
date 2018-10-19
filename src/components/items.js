@@ -5,7 +5,7 @@ class Items extends Component{
         var countItems=0;
       var totalamount=0;
       var items = this.props.datas;
-      var Items = this.props.datas.map((data)=>{
+      var Items = this.props.datas.map((data,i)=>{
           countItems+=1;
           totalamount += parseInt(data.price);
           return(
@@ -15,15 +15,15 @@ class Items extends Component{
               </div>
               <div className="col-sm-6 item-des">
                 <span className="itemName">{data.name}</span><br/>
-                  <span className="itemqty"><span style={{fontWeight:'bold',color:'gray'}}>Qty: </span>{data.qty}</span> <span data-toggle="modal" data-target="#myModalQty" className="glyphicon glyphicon-chevron-down" style={{fontSize:'10px',cursor:'pointer'}}></span><br/>
-                  <span className="itemSize"><span style={{fontWeight:'bold',color:'gray'}}>Size: </span>{data.size }</span> <span data-toggle="modal" data-target="#myModalSize"    className="glyphicon glyphicon-chevron-down" style={{fontSize:'10px',cursor:'pointer'}}></span>
+                  <span className="itemqty"><span style={{fontWeight:'bold',color:'gray'}}>Qty: </span>{data.qty}</span> <span onClick={()=>this.props.changeqty(i)} data-toggle="modal" data-target="#myModalQty" className="glyphicon glyphicon-chevron-down" style={{fontSize:'10px',cursor:'pointer'}}></span><br/>
+                  <span className="itemSize"><span style={{fontWeight:'bold',color:'gray'}}>Size: </span>{data.size }</span> <span data-toggle="modal" data-target="#myModalSize" onClick={()=>this.props.changeqty(i)} className="glyphicon glyphicon-chevron-down" style={{fontSize:'10px',cursor:'pointer'}}></span>
                   
               </div>
               <div className="col-sm-3 item-price">
                   <span style={{float:'right',padding:'0px 10px'}}>Rs.{data.price}</span>
               </div>
                   <div className="edit-item">
-                  <button className="btn btn-link">REMOVE</button>
+                  <button className="btn btn-link" onClick={()=>this.props.removeItem(i)}>REMOVE</button>
                   </div>
                   </div>
                 )
@@ -92,11 +92,11 @@ class Items extends Component{
         </div>
         <div class="modal-body">
             <ul>
-                <li className="qty">1</li>
-                <li className="qty">2</li>
-                <li className="qty">3</li>
-                <li className="qty">4</li>
-                <li className="qty">5</li>
+                <li className="qty" onClick={()=>this.props.changeqtyV("1")}>1</li>
+                <li className="qty" onClick={()=>this.props.changeqtyV("2")}>2</li>
+                <li className="qty" onClick={()=>this.props.changeqtyV("3")}>3</li>
+                <li className="qty" onClick={()=>this.props.changeqtyV("4")}>4</li>
+                <li className="qty" onClick={()=>this.props.changeqtyV("5")}>5</li>
             </ul>
         </div>
         <div class="modal-footer">
@@ -117,11 +117,11 @@ class Items extends Component{
         </div>
         <div class="modal-body" style={{cursor:'pointer'}}>
             <ul>
-                <li className="size">38</li>
-                <li className="size">40</li>
-                <li className="size">42</li>
-                <li className="size">44</li>
-                <li className="size">46</li>
+                <li className="size" onClick={()=>this.props.changesizeV("38")}>38</li>
+                <li className="size" onClick={()=>this.props.changesizeV("40")}>40</li>
+                <li className="size" onClick={()=>this.props.changesizeV("42")}>42</li>
+                <li className="size" onClick={()=>this.props.changesizeV("44")}>44</li>
+                <li className="size" onClick={()=>this.props.changesizeV("46")}>46</li>
             </ul>
         </div>
         <div class="modal-footer">
