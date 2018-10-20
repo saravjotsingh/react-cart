@@ -91,12 +91,12 @@ class Items extends Component{
           <h4 class="modal-title">Change Quantity</h4>
         </div>
         <div class="modal-body">
-            <ul>
-                <li className="qty" onClick={()=>this.props.changeqtyV("1")}>1</li>
-                <li className="qty" onClick={()=>this.props.changeqtyV("2")}>2</li>
-                <li className="qty" onClick={()=>this.props.changeqtyV("3")}>3</li>
-                <li className="qty" onClick={()=>this.props.changeqtyV("4")}>4</li>
-                <li className="qty" onClick={()=>this.props.changeqtyV("5")}>5</li>
+            <ul className="list-group">
+                <li className="qty list-group-item" onClick={()=>this.props.changeqtyV("1")}>1</li>
+                <li className="qty list-group-item" onClick={()=>this.props.changeqtyV("2")}>2</li>
+                <li className="qty list-group-item" onClick={()=>this.props.changeqtyV("3")}>3</li>
+                <li className="qty list-group-item" onClick={()=>this.props.changeqtyV("4")}>4</li>
+                <li className="qty list-group-item" onClick={()=>this.props.changeqtyV("5")}>5</li>
             </ul>
         </div>
         <div class="modal-footer">
@@ -116,12 +116,12 @@ class Items extends Component{
           <h4 class="modal-title">Change Size</h4>
         </div>
         <div class="modal-body" style={{cursor:'pointer'}}>
-            <ul>
-                <li className="size" onClick={()=>this.props.changesizeV("38")}>38</li>
-                <li className="size" onClick={()=>this.props.changesizeV("40")}>40</li>
-                <li className="size" onClick={()=>this.props.changesizeV("42")}>42</li>
-                <li className="size" onClick={()=>this.props.changesizeV("44")}>44</li>
-                <li className="size" onClick={()=>this.props.changesizeV("46")}>46</li>
+            <ul className="list-group">
+                <li className="size list-group-item" onClick={()=>this.props.changesizeV("38")}>38</li>
+                <li className="size list-group-item" onClick={()=>this.props.changesizeV("40")}>40</li>
+                <li className="size list-group-item" onClick={()=>this.props.changesizeV("42")}>42</li>
+                <li className="size list-group-item" onClick={()=>this.props.changesizeV("44")}>44</li>
+                <li className="size list-group-item" onClick={()=>this.props.changesizeV("46")}>46</li>
             </ul>
         </div>
         <div class="modal-footer">

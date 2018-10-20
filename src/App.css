@@ -72,14 +72,14 @@
 
 
 .qty{
-    padding:3px;
+    font-weight: bold;
 }
 .qty:hover{
     color:#526cd0;
     cursor: pointer;
 }
 .size{
-    padding:3px;
+    font-weight: bold;
 }
 .size:hover{
     color:#526cd0;

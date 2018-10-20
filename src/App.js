@@ -59,7 +59,8 @@ class App extends Component {
             cart:cart
         })
         
-//        $('#myModalqty').modal('hide');
+        $('#myModalQty .close').click();
+        
         
     }
     
@@ -73,6 +74,7 @@ class App extends Component {
         })
         
 //        $('#myModalqty').modal('hide');
+        $('#myModalSize .close').click();
         
     }
     
