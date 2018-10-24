@@ -29,7 +29,7 @@
 
 .item-price{
     padding:10px;
-    
+    text-align: right;
 }
 
 .edit-item{
@@ -98,13 +98,15 @@
         text-align: center;
     }
     .item-price{    
-        margin-right: 150px;
+        width: 100%;
+        text-align: center;
     }
     
     .edit-item{
         position:relative;
         border:0px;
+        width:100%;
         text-align: center;
-        left:110px;
+        left:0;
     }
 }

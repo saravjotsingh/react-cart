@@ -7,7 +7,7 @@ class Items extends Component{
       var items = this.props.datas;
       var Items = this.props.datas.map((data,i)=>{
           countItems+=1;
-          totalamount += parseInt(data.price);
+          totalamount += parseInt(data.price) * parseInt(data.qty);
           return(
               <div className="row item" style={{margin:'20px 0'}}>
               <div className="col-sm-3 item-image">
@@ -19,8 +19,8 @@ class Items extends Component{
                   <span className="itemSize"><span style={{fontWeight:'bold',color:'gray'}}>Size: </span>{data.size }</span> <span data-toggle="modal" data-target="#myModalSize" onClick={()=>this.props.changeqty(i)} className="glyphicon glyphicon-chevron-down" style={{fontSize:'10px',cursor:'pointer'}}></span>
                   
               </div>
-              <div className="col-sm-3 item-price">
-                  <span style={{float:'right',padding:'0px 10px'}}>Rs.{data.price}</span>
+              <div className="col-sm-3 item-price" style={{float:'right',padding:'0px 10px'}}>
+                  Rs.{data.price}
               </div>
                   <div className="edit-item">
                   <button className="btn btn-link" onClick={()=>this.props.removeItem(i)}>REMOVE</button>
