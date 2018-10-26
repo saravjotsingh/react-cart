@@ -1,0 +1,36 @@
+.bb{
+    padding-top: 1px;
+    margin-top: -1px;
+    background-color:#ccc;
+    height:723px;
+}
+.bar{
+    margin-left: 250px;
+    overflow: hidden;
+    background-color:white;
+    margin-top: 40px;
+    margin-right: 20px;
+    padding:10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 6px -6px #777;
+}
+.view{
+    border:1px solid lightgray;
+}
+
+.a{
+    width:93%;
+    margin-left:30px;
+}
+
+.view-data{
+    text-align: center;
+}
+.view-icons{
+    color:deepskyblue;
+    font-size: 30px;
+    padding:10px;
+}
+
+.chart{
+}
