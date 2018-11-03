@@ -1,7 +1,7 @@
 .bb{
     padding-top: 1px;
     margin-top: -1px;
-    background-color:#ccc;
+    background-color:#e6e6ff;
     height:723px;
 }
 .bar{
@@ -11,8 +11,7 @@
     margin-top: 40px;
     margin-right: 20px;
     padding:10px;
-    border-radius: 5px;
-    box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0px 10px 6px -10px #777    ;
 }
 .view{
     border:1px solid lightgray;
