@@ -54,7 +54,7 @@ class AddItem extends Component{
                     )   
         })    
         }else{
-            var Image = <div className="text-center" style={{marginTop:'10%'}}>
+            var Image = <div className="text-center" style={{marginTop:'9%'}}>
                     <i onClick={this.trigger} class="fas fa-plus-square" style={{fontSize:'40px',cursor:'pointer'}}></i><p> CLICK TO ADD IMAGES   </p>
                 </div>
         }

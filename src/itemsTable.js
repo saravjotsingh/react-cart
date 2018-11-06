@@ -10,6 +10,11 @@ const datas = [{
     name:'abc',
     des:'aaaa',
     size:'aa',
+},{
+    price:'100',
+    name:'abc',
+    des:'aaaa',
+    size:'aa',
 }]
 
 class ItemsTable extends Component{
@@ -39,7 +44,7 @@ class ItemsTable extends Component{
         return(
             <div>
                 <div className="itemtable">
-                    <button onClick={this.props.toggleItemTable} class="btn btn-primary">ADD ITEM</button>
+                    <button onClick={this.props.toggleItemTable} class="btn btn-primary"><i class="fas fa-arrow-left"></i></button>
                     <table className="table table-hover itemsTable">
                         <thead>
                             <tr>
