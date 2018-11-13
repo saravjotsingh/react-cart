@@ -10,13 +10,15 @@
     border-right: 1px solid lightgray;
 }
 
-.item-image img{
+.item-images img{
     height:150px;
 }
 
 .item{
     border:1px solid lightgray;
    position: relative;
+    box-shadow: -1px -1px 5px 2px rgba(0,0,0,0.1),
+              5px 5px 30px 4px rgba(45,78,255,0.15);
 }
 
 .item-des{

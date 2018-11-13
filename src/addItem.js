@@ -29,11 +29,12 @@ class AddItem extends Component{
     
     trigger=()=>{
         $('input[type=file]').trigger('click');
-        $(".additemimage").css("display",'block');
     }
     
     
     fileChangedHandler = (event) => {
+        
+        $(".additemimage").css("display",'block');
     var blockImages=[]  ;
         for(let i=0;i<event.target.files.length;i++){
         blockImages.push(event.target.files[i]);

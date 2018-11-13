@@ -10,7 +10,7 @@ class Items extends Component{
           totalamount += parseInt(data.price) * parseInt(data.qty);
           return(
               <div className="row item" style={{margin:'20px 0'}}>
-              <div className="col-sm-3 item-image">
+              <div className="col-sm-3 item-images">
                 <img src={data.image}></img>
               </div>
               <div className="col-sm-6 item-des">
