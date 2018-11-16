@@ -1,0 +1,104 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    
+}
+
+.MAIN{
+    background-color: aliceblue;
+    padding-top: 1px;
+    margin-top: -1px;   
+    height:723px;
+    overflow: hidden;
+    
+}
+
+
+.orderlistblock{
+    background-color: white;
+    margin-left:263px;
+    margin-top: 30px;
+    width:80%;
+    padding:20px;
+    border-radius: 10px;
+     box-shadow: -1px -1px 5px 2px rgba(0,0,0,0.1),
+              5px 5px 30px 4px rgba(45,78,255,0.15);
+     
+}
+
+.orderlist-heading{
+    font-size: 25px;
+}
+
+.search-1{
+    display:flex;
+}
+.search-1 label{
+    width:80px;
+    line-height: 34px;
+}
+.search-1 input{
+    width:200px;
+}
+
+.show-options{
+display:flex;
+float: right;
+width:20%;
+}
+
+.show-options label{
+line-height: 30px; 
+width:60px;
+}
+
+
+.show-options select{
+width:100px;
+    
+}
+
+.fa-sort{
+    cursor: pointer;
+}
+
+
+.PENDING{
+    background-color:yellowgreen;
+    color:white;
+    border-radius: 4px;
+    padding:3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.FAILED{
+    background-color:darkred;
+    color:white;
+    border-radius: 4px;
+    padding:3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.SHIPPING{
+    background-color:skyblue;
+    color:white;
+    border-radius: 4px;
+    padding:3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.DELIVERED{
+    background-color:lightcoral;
+    color:white;
+    border-radius: 4px;
+    padding:3px;
+    font-size: 12px;
+    font-weight: 500;
+}
